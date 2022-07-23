@@ -440,12 +440,24 @@ label {
 }
 
 input {
+  outline:none;
   width: 100%;
   box-sizing: border-box;
   height: auto;
   font-size: 0.8em;
   padding: 0.5vw;
   line-height: normal;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+input:focus {
+  border: 2px solid #3A453D;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.415);
+}
+
+input:not(:focus):not(:placeholder-shown):invalid{
+  border: 1px solid red;
 }
 
 a {
